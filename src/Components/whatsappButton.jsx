@@ -3,8 +3,8 @@ import React  from "react";
 import  { useState, useEffect } from 'react';
 
 const WhatsAppButton = () => {
-  const phoneNumber = "7024850828"; // Replace with your WhatsApp number
-  const message = "Hi Atul, I want some information about studyBalancer!"; // Optional prefilled message
+  const phoneNumber = "+91 88006 58299"; // Replace with your WhatsApp number
+  const message = "Thank you for contacting Prehome. How can we help you today?"; // Optional prefilled message
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
    const [isMobile, setIsMobile] = useState(false);

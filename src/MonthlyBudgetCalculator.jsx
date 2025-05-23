@@ -41,9 +41,9 @@ const MonthlyBudgetCalculator = () => {
 
   const [income, setIncome] = useState("");
   const [breakdown, setBreakdown] = useState({
-    needs: 20000,
-    wants: 12000,
-    savings: 8000,
+    needs: `20,000`,
+    wants: `12,000`,
+    savings: `8,000`,
   });
 
   const handleChange = (e) => {
@@ -54,9 +54,9 @@ const MonthlyBudgetCalculator = () => {
 
     if (!isNaN(numericValue)) {
       setBreakdown({
-        needs: (numericValue * 0.5).toFixed(0),
-        wants: (numericValue * 0.3).toFixed(0),
-        savings: (numericValue * 0.2).toFixed(0),
+        needs: Number((numericValue * 0.5).toFixed(0)).toLocaleString(),
+        wants: Number((numericValue * 0.3).toFixed(0)).toLocaleString(),
+        savings: Number((numericValue * 0.2).toFixed(0)).toLocaleString(),
       });
     } else {
       setBreakdown({ needs: 0, wants: 0, savings: 0 });
@@ -148,7 +148,7 @@ const MonthlyBudgetCalculator = () => {
                   // variant="outlined"
                   fullWidth
                   
-                  placeholder="Enter your monthly income"
+                  placeholder="Ex - INR 40,000"
                   value={income}
                   onChange={handleChange}
                   sx={{
@@ -204,7 +204,7 @@ const MonthlyBudgetCalculator = () => {
                     gutterBottom
                     align="center"
                   >
-                    Needs
+                    Needs(50%)
                   </Typography>
                   <Typography
                     variant="h6"
@@ -244,7 +244,7 @@ const MonthlyBudgetCalculator = () => {
                     gutterBottom
                     align="center"
                   >
-                    Wants
+                    Wants(30%)
                   </Typography>
                   <Typography
                     variant="h6"
@@ -285,7 +285,7 @@ const MonthlyBudgetCalculator = () => {
                     gutterBottom
                     align="center"
                   >
-                    Savings
+                    Savings(20%)
                   </Typography>
                   <Typography
                     variant="h6"
@@ -349,14 +349,7 @@ const MonthlyBudgetCalculator = () => {
                   protected.
                 </Typography>
 
-                <Typography
-                 variant="body1"
-            
-                  marginBottom="10px"
-                  sx={{ color: { sx: "white", md: "black" , fontSize: "16px", marginTop: "10px"} }}
-                >
-                  Tabular column as in description document.
-                </Typography>
+                
 
                 <div style={{ overflowX: "auto", marginTop: "24px" }}>
                   <table
@@ -367,7 +360,7 @@ const MonthlyBudgetCalculator = () => {
                     }}
                   >
                     <thead>
-                      <tr>
+                      <tr className="table-head">
                         <th style={thStyle}>Needs (50%)</th>
                         <th style={thStyle}>Wants (30%)</th>
                         <th style={thStyle}>Savings (20%)</th>
@@ -486,7 +479,7 @@ const MonthlyBudgetCalculator = () => {
               <TextField
                 // variant="outlined"
                 fullWidth
-                placeholder="INR"
+                placeholder="Ex - INR 40,000"
                 SelectProps={
                   {
                     // native: true,
@@ -518,7 +511,7 @@ const MonthlyBudgetCalculator = () => {
                   gutterBottom
                   align="center"
                 >
-                  Needs
+                  Needs(50%)
                 </Typography>
                 <Typography
                   variant="h6"
@@ -538,7 +531,7 @@ const MonthlyBudgetCalculator = () => {
                   gutterBottom
                   align="center"
                 >
-                  Wants
+                  Wants(30%)
                 </Typography>
                 <Typography
                   variant="h6"
@@ -563,7 +556,7 @@ const MonthlyBudgetCalculator = () => {
                   gutterBottom
                   align="center"
                 >
-                  Savings
+                  Savings(20%)
                 </Typography>
                 <Typography
                   variant="h6"
@@ -620,12 +613,7 @@ const MonthlyBudgetCalculator = () => {
                   protected.
                 </Typography>
 
-                <Typography
-                  variant="body1"
-                  sx={{ fontSize: "16px", marginTop: "10%" }}
-                >
-                  Tabular column as in description document.
-                </Typography>
+               
 
                 <div style={{ overflowX: "auto", marginTop: "24px" }}>
                    <table
@@ -636,7 +624,7 @@ const MonthlyBudgetCalculator = () => {
                     }}
                   >
                     <thead>
-                      <tr>
+                      <tr className="table-head">
                         <th style={thStyle}>Needs (50%)</th>
                         <th style={thStyle}>Wants (30%)</th>
                         <th style={thStyle}>Savings (20%)</th>
