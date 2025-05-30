@@ -9,11 +9,11 @@ import './Header.css';
 // import {useMediaQuery} from "@mui/material";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+      const [isOpen, setIsOpen] = useState(false);
   // const isDesktop = useMediaQuery("(min-width:1200px)");
     const [openModal, setOpenModal] = useState(false);
 
-    // Function to handle modal open and close
+   Function to handle modal open and close
   const handleOpenModal = () => {
     setOpenModal(true);
   };
@@ -289,8 +289,8 @@ const Header = () => {
           </details>
           
         </li>
-<div
-    className="mobile-waitlist-btn-navbar"
+     <div
+    className="mobile-waitlist-btn"
     onClick={handleOpenModal}
     data-bs-toggle="modal"
     data-bs-target="#exampleModal"
