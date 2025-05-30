@@ -68,6 +68,8 @@ const MonthlyBudgetCalculator = () => {
     padding: "12px",
     textAlign: "left",
     fontSize: isDesktop ? "16px" : "12px",
+     backgroundColor:"#ececec",
+fontFamily:"poppins",
   };
 
   const tdStyle = {
@@ -75,6 +77,7 @@ const MonthlyBudgetCalculator = () => {
     padding: "12px",
     verticalAlign: "top",
     fontSize: isDesktop ? "16px" : "12px",
+    fontFamily:"poppins",
   };
 
   const trStyle = {
@@ -83,6 +86,7 @@ const MonthlyBudgetCalculator = () => {
     verticalAlign: "top",
     fontSize: isDesktop ? "16px" : "12px",
     height: isDesktop ? "" : "59px",
+    fontFamily:"poppins",
   };
 
 
