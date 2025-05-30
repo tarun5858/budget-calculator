@@ -6,7 +6,7 @@ details[open] .arrow-icon {
   transform: rotate(0deg); /* Default arrow direction (upwards) */
   transition: transform 0.3s ease; /* Smooth rotation animation */
 }
-.mobile-waitlist-btn-navbar{
+.mobile-waitlist-btn{
       padding: 10px 20px;
     background: #fff;
     color: rgb(0, 127, 173);
